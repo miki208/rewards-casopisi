@@ -19,8 +19,10 @@
           initApp();
         } else if(response.status === 'not_authorized') {
           //please authorize app
+          logIn();
         } else {
           //please log in
+          logIn();
         }
       };
 
