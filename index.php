@@ -42,14 +42,14 @@
         }, {scope : 'public_profile,email'});
       };
 
-      fucntion fail(){
+      function fail(){
         window.close();
       };
 
       function initApp(response){
         console.log(response);
         accessToken = response.authResponse.accessToken;
-      }
+      };
 
       window.fbAsyncInit = function() {
         FB.init({
