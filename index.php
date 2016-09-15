@@ -43,7 +43,7 @@
       };
 
       function fail(){
-        window.close();
+        window.location = "failed.html";
       };
 
       function initApp(response){
