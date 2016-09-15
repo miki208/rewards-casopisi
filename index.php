@@ -9,11 +9,27 @@
 
   <body>
     <script>
+      function statusChangeCallback(response){
+        alert(response.status);
+        if(response.status === 'connected'){
+          //user logged in
+        } else if(response.status === 'not_authorized') {
+          //please authorize app
+        } else {
+          //please log in
+        }
+      };
+
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '201331556950198',
           xfbml      : false,
           version    : 'v2.7'
+        });
+
+        //login stuff
+        FB.getLoginStatus(function(response){
+          statusChangeCallback(response);
         });
       };
 
