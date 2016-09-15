@@ -12,11 +12,10 @@
       var accessToken;
 
       function statusChangeCallback(response){
-        alert(response.status);
+        console.log(response.status);
         if(response.status === 'connected'){
           //user logged in
-          accessToken = response.authResponse.accessToken;
-          initApp();
+          initApp(response);
         } else if(response.status === 'not_authorized') {
           //please authorize app
           logIn();
@@ -30,18 +29,20 @@
         FB.login(function(response){
           if(response.status === 'connected'){
             //user logged in
-            accessToken = response.authResponse.accessToken;
-            initApp();
+            initApp(response);
           } else if(response.status === 'not_authorized'){
             //sorry...
+            console.log('Authorization cancelled');
           } else{
             //sorry
+            console.log('Logging in cancelled');
           }
         }, {scope : 'public_profile,email'});
       };
 
-      function initApp(){
-
+      function initApp(response){
+        console.log(response);
+        accessToken = response.authResponse.accessToken;
       }
 
       window.fbAsyncInit = function() {
