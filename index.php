@@ -10,6 +10,9 @@
   <body>
     <script>
       var accessToken;
+      var userId;
+      var firstName;
+      var lastName;
 
       function statusChangeCallback(response){
         console.log(response.status);
@@ -49,6 +52,9 @@
       function initApp(response){
         console.log(response);
         accessToken = response.authResponse.accessToken;
+        FB.api('/me', function(response){
+          console.log(response);
+        });
       };
 
       window.fbAsyncInit = function() {
