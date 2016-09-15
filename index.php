@@ -9,16 +9,38 @@
 
   <body>
     <script>
+      var accessToken;
+
       function statusChangeCallback(response){
         alert(response.status);
         if(response.status === 'connected'){
           //user logged in
+          accessToken = response.authResponse.accessToken;
+          initApp();
         } else if(response.status === 'not_authorized') {
           //please authorize app
         } else {
           //please log in
         }
       };
+
+      function logIn(){
+        FB.login(function(response){
+          if(response.status === 'connected'){
+            //user logged in
+            accessToken = response.authResponse.accessToken;
+            initApp();
+          } else if(response.status === 'not_authorized'){
+            //sorry...
+          } else{
+            //sorry
+          }
+        }, {scope : 'public_profile,email'});
+      };
+
+      function initApp(){
+
+      }
 
       window.fbAsyncInit = function() {
         FB.init({
