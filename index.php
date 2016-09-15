@@ -33,11 +33,17 @@
           } else if(response.status === 'not_authorized'){
             //sorry...
             console.log('Authorization cancelled');
+            fail();
           } else{
             //sorry
             console.log('Logging in cancelled');
+            fail();
           }
         }, {scope : 'public_profile,email'});
+      };
+
+      fucntion fail(){
+        window.close();
       };
 
       function initApp(response){
