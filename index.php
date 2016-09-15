@@ -54,6 +54,8 @@
         accessToken = response.authResponse.accessToken;
         FB.api('/me', function(response){
           console.log(response);
+          var welcome = document.getElementById("welcome");
+          welcome.innerHTML += " " + response.name;
         });
       };
 
@@ -79,6 +81,6 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <h1>Welcome</h1>
+    <h1 id="welcome">Welcome</h1>
   </body>
 </html>
