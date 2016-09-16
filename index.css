@@ -14,7 +14,7 @@ html, body {
   z-index: 1;
   position: fixed;
   display: table;
-  visibility: hidden;
+  visibility: visible;
 }
 
 #login_button_wrapper {

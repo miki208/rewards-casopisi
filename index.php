@@ -49,7 +49,7 @@
 
       function initApp(response){
         console.log(response);
-        document.getElementById("login_screen").style.visibility = "visible";
+        document.getElementById("login_screen").style.visibility = "hidden";
         accessToken = response.authResponse.accessToken;
         FB.api('/me', function(response){
           console.log(response);
