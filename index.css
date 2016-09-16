@@ -6,3 +6,32 @@ html, body {
   width: 100%;
   height: 100%;
 }
+
+#login_screen {
+  width: 100%;
+  height: 100%;
+  background-color: #FAEBD7;
+  z-index: 1;
+  position: fixed;
+  display: table;
+  visibility: hidden;
+}
+
+#login_button_wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#login_button {
+  background-color: #3b5998;
+  color: white;
+  padding: 20px 60px 20px 60px;
+  font-size: xx-large;
+  font-family: cursive;
+  color: white;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  outline: none;
+}
