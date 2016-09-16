@@ -88,6 +88,13 @@
       </div>
     </div>
 
-    <h1 id="welcome">Welcome</h1>
+    <div id="wrapper">
+      <header>
+        <h1>Rewards</h1>
+      </header>
+      <main>
+        <div class="reward"><p>1</p></div>
+      </main>
+    </div>
   </body>
 </html>
