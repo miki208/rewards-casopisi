@@ -56,7 +56,6 @@
           console.log(response);
           name = response.name;
           userId = response.id;
-          FB.logout();
         });
       };
 
