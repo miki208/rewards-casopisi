@@ -93,7 +93,13 @@
         <h1>Rewards</h1>
       </header>
       <main>
-        <div class="reward"><p>1</p></div>
+        <?php
+          for($i = 1; $i <= 100; $i++)
+          {
+            echo "<div class='reward'><p>$i</p></div>\n";
+          }
+        ?>
+
       </main>
     </div>
   </body>
