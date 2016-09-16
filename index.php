@@ -20,8 +20,10 @@
           initApp(response);
         } else if(response.status === 'not_authorized') {
           //please authorize app
+          document.getElementById("login_button").disabled = false;
         } else {
           //please log in
+          document.getElementById("login_button").disabled = false;
         }
       };
 
@@ -81,7 +83,7 @@
 
     <div id="login_screen">
       <div id="login_button_wrapper">
-        <button id="login_button" type="button" onclick="logIn()">Log in</button>
+        <button id="login_button" type="button" onclick="logIn()" disabled>Log in</button>
       </div>
     </div>
 
