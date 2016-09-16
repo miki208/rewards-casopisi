@@ -11,8 +11,7 @@
     <script>
       var accessToken;
       var userId;
-      var firstName;
-      var lastName;
+      var name;
 
       function statusChangeCallback(response){
         console.log(response.status);
@@ -53,8 +52,8 @@
         accessToken = response.authResponse.accessToken;
         FB.api('/me', function(response){
           console.log(response);
-          var welcome = document.getElementById("welcome");
-          welcome.innerHTML += " " + response.name;
+          name = response.name;
+          userId = response.id;
         });
       };
 
